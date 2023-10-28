@@ -4,7 +4,7 @@ from sklearn.metrics import pairwise_distances
 import os
 import pandas as pd
 
-data = pd.read_csv('data.csv')
+data = pd.read_csv('autism/autistic_quiz/data.csv')
 
 user_values = {}
 user_values['Symptom 1'] = int(
@@ -48,8 +48,8 @@ def load_and_compute_descriptors(dataset_path):
     
     return np.array(dataset)
 
-non_autistic_dataset_path = r'C:\Users\narma\Desktop\code\detection\autism\data\non_autistic'
-autistic_dataset_path = r'C:\Users\narma\Desktop\code\detection\autism\data\autistic'
+non_autistic_dataset_path = r'autism\non_autistic'
+autistic_dataset_path = r'autism\autistic'
 
 non_autistic_dataset = load_and_compute_descriptors(non_autistic_dataset_path)
 autistic_dataset = load_and_compute_descriptors(autistic_dataset_path)
